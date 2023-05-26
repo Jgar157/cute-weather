@@ -39,11 +39,14 @@
 
 .location-form {
     width: 600px;
-
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .location-box {
-    width: 100%;
+    width: 90%;
     height: 30px;
     border: none;
     border-radius: 8px;
@@ -54,4 +57,22 @@
 
 .location-box:focus {
     outline: none;
+}
+
+.search-button {
+    width: 44px;
+    margin-left: 20px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    filter: brightness(100%);
+    transition: filter 0.1s ease-in-out;
+}
+
+.search-button:hover {
+    filter: brightness(110%);
+}
+
+.search-button:active {
+    filter: brightness(90%);
 }
