@@ -1,0 +1,63 @@
+.landingPage {
+    height: 80%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.time {
+    font-size: 3rem;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.landingText {
+    font-size: 1.4rem;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.locationForm {
+    width: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.locationBox {
+    width: 90%;
+    height: 30px;
+    border: none;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 1rem;
+    box-shadow: 3px 3px 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.locationBox:focus {
+    outline: none;
+}
+
+.searchButton {
+    width: 44px;
+    margin-left: 20px;
+    border-radius: 100%;
+    box-shadow: 2px 2px 0 2px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    filter: brightness(100%);
+    transition: filter 0.1s ease-in-out;
+}
+
+.searchButton:hover {
+    filter: brightness(110%);
+}
+
+.searchButton:active {
+    filter: brightness(90%);
+}
