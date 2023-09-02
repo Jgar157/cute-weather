@@ -1,16 +1,16 @@
 import styles from "./Landing.module.css";
+import Clock from "./Clock/Clock";
 
 interface LandingProps {
   updateLoc: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  time: string;
   location: string;
   updatePage: (newPage: string) => void;
 }
 
-function Landing({ updateLoc, time, location, updatePage }: LandingProps) {
+function Landing({ updateLoc, location, updatePage }: LandingProps) {
   return (
     <div className={styles.landingPage}>
-      <h1 className={styles.time}>{time}</h1>
+      <Clock></Clock>
       <p className={styles.landingText}>Input your location below</p>
       <form className={styles.locationForm}>
         <input
