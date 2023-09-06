@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import styles from "./Landing.module.css";
+import styles from "../Landing.module.css";
 
 function Clock() {
     const [time, setTime] = useState<string>(getCurrTime());

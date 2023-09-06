@@ -1,6 +1,9 @@
 import styles from "./Landing.module.css";
 import Clock from "./Clock/Clock";
 
+import * as React from 'react';
+
+
 interface LandingProps {
   updateLoc: (event: React.ChangeEvent<HTMLInputElement>) => void;
   location: string;
@@ -12,7 +15,7 @@ function Landing({ updateLoc, location, updatePage }: LandingProps) {
     <div className={styles.landingPage}>
       <Clock></Clock>
       <p className={styles.landingText}>Input your location below</p>
-      <form className={styles.locationForm}>
+      <form className={styles.locationForm} onSubmit={() => updatePage("weather")}>
         <input
           placeholder="Rome, Italy"
           className={styles.locationBox}

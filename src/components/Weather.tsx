@@ -7,7 +7,7 @@ interface WeatherProps {
   updatePage: (newPage: string) => void;
 }
 
-function Weather({ location, updatePage }: WeatherProps) {
+function Weather({ location }: WeatherProps) {
   // API request using location
   // updatePage("landing"); Move back to the landing page
   const [weatherData, setWeatherData] = useState<any>({}); //
@@ -18,8 +18,8 @@ function Weather({ location, updatePage }: WeatherProps) {
     country: "",
   };
 
-  const [latitude, setLatitude] = useState<number>(0);
-  const [longitude, setLongitude] = useState<number>(0);
+  // const [latitude, setLatitude] = useState<number>(0);
+  // const [longitude, setLongitude] = useState<number>(0);
 
   // Parse the location string into city, state, and country
   const parsedLocation = (location: string) => {
@@ -57,8 +57,8 @@ function Weather({ location, updatePage }: WeatherProps) {
     // };
   });
 
-  const apiKey = "8d970943abb5e65c2d3f7f042ffb071e";
-  const forecastLength = 6;
+  // const apiKey = "8d970943abb5e65c2d3f7f042ffb071e";
+  // const forecastLength = 6;
   // Api call for actual weather forecasting (only run on first render!)
   useEffect(() => {
     const forecastCall = async () => {
