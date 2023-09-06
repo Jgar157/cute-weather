@@ -1,16 +1,14 @@
 import { useEffect, useState } from "react";
 import styles from "./Weather.module.css";
 import testData from "../weatherData.json";
+import { useParams } from "react-router-dom";
 
-interface WeatherProps {
-  location: string;
-  updatePage: (newPage: string) => void;
-}
-
-function Weather({ location }: WeatherProps) {
+function Weather() {
   // API request using location
   // updatePage("landing"); Move back to the landing page
-  const [weatherData, setWeatherData] = useState<any>({}); //
+  const [weatherData, setWeatherData] = useState<any>({});
+  const { location } = useParams();  // 'location' corresponds to the name you defined in your route
+
 
   let locationData = {
     city: "",
@@ -22,7 +20,11 @@ function Weather({ location }: WeatherProps) {
   // const [longitude, setLongitude] = useState<number>(0);
 
   // Parse the location string into city, state, and country
-  const parsedLocation = (location: string) => {
+  const parsedLocation = (location: string | undefined) => {
+    if (!location) {
+      return "";
+    }
+    
     let locationArray = location.split(",");
     locationArray = locationArray.map(
       (loc) => loc[0].toUpperCase() + loc.slice(1)
